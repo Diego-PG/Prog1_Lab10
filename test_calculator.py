@@ -71,7 +71,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide_by_zero(self):  # 1 assertion
         with self.assertRaises(ZeroDivisionError):
-            divide(0,4)
+            div(0,4)
             raise ZeroDivisionError
 
     def test_logarithm(self):
