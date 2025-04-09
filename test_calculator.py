@@ -1,5 +1,5 @@
 import unittest
-from calculator import *
+from calculator import add, subtract, divide, logarithm
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
@@ -52,5 +52,30 @@ class TestCalculator(unittest.TestCase):
     ##########################
 
 # Do not touch this
+    def test_add(self):
+        self.assertEqual(add(3,2), 5)
+        self.assertEqual(add(4,2),6)
+        self.assertEqual(add(4,6),10)
+
+    def test_subtract(self):
+        self.assertEqual(subtract(3,2),1)
+        self.assertEqual(subtract(4,2),2)
+        self.assertEqual(subtract(8,3),5)
+
+    def test_divide_by_zero(self):  # 1 assertion
+        with self.assertRaises(ZeroDivisionError):
+            divide(0,4)
+            raise ZeroDivisionError
+
+    def test_logarithm(self):
+        self.assertEqual(logarithm(2,2),1)
+        self.assertEqual(logarithm(4,2),0.5)
+        self.assertEqual(logarithm(4,8),1.5)
+
+    def test_log_invalid_base(self):
+        with self.assertRaises(ValueError):
+            logarithm(0,2)
+            raise ValueError
+
 if __name__ == "__main__":
     unittest.main()
