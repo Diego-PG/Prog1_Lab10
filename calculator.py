@@ -1,3 +1,7 @@
+# https://github.com/Diego-PG/Prog1_Lab10.git
+# Partner 1: Diego Penuela-Gonzalez
+# Partner 2: Michael Jaccoma
+
 import math
 """
 calculator.py
